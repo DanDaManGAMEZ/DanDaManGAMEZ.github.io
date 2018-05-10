@@ -1,0 +1,91 @@
+body, html {
+    height: 100%;
+    margin: 0px auto;
+    padding: 0px auto;
+}
+
+.wrapper {
+    height: auto;
+    min-height: 100%;
+    margin: 0px auto;
+    padding: 0px auto;
+	color: black;
+	background-color: black;
+ }
+
+.button {
+    background-color: black;
+    border-style: solid;
+	border-color: white;
+    border-width: 2px;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+}
+
+.button::before,
+.button::after {
+	background-color: black;
+    border-style: solid;
+	border-color: white;
+    border-width: 2px;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+  /* performance boost hardware acceleration activated in 3D */
+  transform: translateZ(0) rotate(-45deg);
+  transform-origin: 50% 68.75% 0;
+}
+
+.button::before {
+    box-shadow: 0 0 0 1px white;
+}
+
+.button::after {
+    animation: buttonGrow 1.5s ease-out infinite;
+    box-shadow: 0 0 0 3px white;
+}
+
+.button:active {
+    box-shadow: 0 0 0 3px white;
+}
+
+@keyframes buttonGrow {
+    0% {
+       box-shadow: 0 0 0 1px white;
+    }
+
+    60% {
+		box-shadow: 0 0 0 2px white;
+    }
+
+    75% {
+		box-shadow: 0 0 0 2px white;
+    }
+
+    100% {
+		box-shadow: 0 0 0 1px white;
+    }
+}
+
+.center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+
+  transform: translate(-50%, -50%);
+
+
+}
+
+.enterbutton {
+	border-radius: 50%;
+}

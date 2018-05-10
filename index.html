@@ -7,6 +7,9 @@
 		<!-- Custom Style Sheets -->
 		<link rel="stylesheet" href="styles/main.css">
 		
+		<!-- Custom JS -->
+		<script src="js/musicplayer.js"></script>
+		
 		<!-- Latest Bootstrap -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
@@ -16,6 +19,17 @@
 	</head>
 	
 	<body>
-		
+		<audio id="beat" preload="auto" data-bpm="124" autoplay loop>
+			<source src="resources/simplebeat.wav">
+			Your browser does not support the <code>audio</code> element.
+		</audio>
+		<script>
+			window.onload = function() {
+				document.getElementById("beat").play();
+			}
+		</script>
+		<div class="wrapper">
+			<button class="button enterbutton center">Enter <br>Website</button>
+		</div>
 	</body>
 </html>
